@@ -2,7 +2,8 @@
 
 [백그라운드 실행](http://unix.stackexchange.com/questions/103731/run-a-command-without-making-me-wait)
 
-    long-running-command &
+    nohup long-running-command > /dev/null 2>&1 &
+    # 2>&1의 의미는 표준 출력의 전달되는 곳으로 표준에러를 전달하라라는 의미. 
     
 # Zip
 
