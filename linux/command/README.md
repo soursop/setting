@@ -13,3 +13,9 @@
 
     tar zcvf [파일명.tar.gz] [압축 폴더]
 
+# SSH
+
+[ssh로 파일이 있는지 체크하기](http://serverfault.com/questions/103174/check-to-see-if-a-directory-exists-remotely-shell-script)
+
+    if ! ssh user@host "test -e '/usr/local/username/$folder'"; then
+      # the file doesn't exist
