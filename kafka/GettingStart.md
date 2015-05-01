@@ -1,3 +1,4 @@
+http://kafka.apache.org/documentation.html
 # Introduction
 
 각 토픽에 메시지를 보낼 수 있는 큐 시스템
