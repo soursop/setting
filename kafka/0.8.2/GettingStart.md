@@ -136,7 +136,7 @@ test 토픽을 생성했을때, 복제노드가 서버 0번에만 있었기 때�
     7564 ttys002    0:15.91 /System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home/bin/java...
     > kill -9 7564
 
-leader가 다른 슬레이므로 변경되고 in-sync 복제 셋에서 1이 사라졌다:
+leader가 다른 슬레이브로 변경되고, in-sync 복제 set에서 1이 사라졌다:
 
     > bin/kafka-topics.sh --describe --zookeeper localhost:2181 --topic my-replicated-topic
     Topic:my-replicated-topic	PartitionCount:1	ReplicationFactor:3	Configs:
