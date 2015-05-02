@@ -27,13 +27,14 @@ single partition 과 replica를 1개 가진 "test" 토픽을 생성한다.
 
     > bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
 
-We can now see that topic if we run the list topic command:
+list topic command를 사용해 모든 토픽 리스트를 볼 수 있다 :
 
     > bin/kafka-topics.sh --list --zookeeper localhost:2181
     test
 
-Alternatively, instead of manually creating topics you can also configure your brokers to auto-create topics when a non-existent topic is published to.
-Step 4: Send some messages
+매번 토픽을 생성하는 대신, 브로커 설정을 통해 토픽이 존재하지 않을 때는 재동으로 토픽을 생성하도록 할 수 있다.
+
+#Step 4: Send some messages
 
 Kafka는 standard inout이나 파일로부터 input을 받아와 Kafka cluster로 전송할 수 있는 클라이언트도 함께 제공한다. 각 라인 입력시마다 메시지가 전송된다. Producer를 실행한 뒤 몇몇 메시지를 콘솔에 입력하면 서버로 전송이 된다.
 
@@ -45,7 +46,7 @@ Kafka는 standard inout이나 파일로부터 input을 받아와 Kafka cluster�
 ps. WARN Property topic is not valid (kafka.utils.VerifiableProperties)
 라는 warn이 뜨지만 메시지는 제대로 간다. 이것때문에 안가는줄 알고 실제 소스까지 까서 삽질했다.
 
-Step 5: Start a consumer
+# Step 5: Start a consumer
 
 command line consumer를 이용해 테스트를 해보자.
 
@@ -101,9 +102,9 @@ broker.id는 클러스터에서 유일한 키값이므로 중복되면 안된다
 
 첫번째 줄은 모든 파티션의 요약 정보이고, 각 추가 라인은 1개 파티션의 정보를 보여준다. (예제에서는 파티션이 1개라 1줄만 추가 출력)
 
-| leader		| read, write 권한 가진 노드 |
-| replicas		| 해당 노드를 복제하는 노드 리스트 (leader도 복제 노드에 포함) |
-| isr			| 현재 in-sync상태인 복제 노드 집합. 현재 살아있고 leader와 sync가 맞는 상태이다 |
+- leader		| read, write 권한 가진 노드
+- replicas		| 해당 노드를 복제하는 노드 리스트 (leader도 복제 노드에 포함)
+- isr			| 현재 in-sync상태인 복제 노드 집합. 현재 살아있고 leader와 sync가 맞는 상태이다
 
 이미 생성했던 test 토픽에도 똑같이 상태를 확인할 수 있다.
 
