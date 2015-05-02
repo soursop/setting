@@ -1,9 +1,10 @@
 # Step 1: Download code
 
 다운로드 the 0.8.2.0 release, 압축 푼다.
-> wget http://mirror.apache-kr.org/kafka/0.8.2.0/kafka_2.10-0.8.2.0.tgz
-> tar -xzf kafka_2.10-0.8.2.0.tgz
-> cd kafka_2.10-0.8.2.0
+
+    > wget http://mirror.apache-kr.org/kafka/0.8.2.0/kafka_2.10-0.8.2.0.tgz
+    > tar -xzf kafka_2.10-0.8.2.0.tgz
+    > cd kafka_2.10-0.8.2.0
 
 # Step 2: Start the server
 
