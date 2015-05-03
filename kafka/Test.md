@@ -19,6 +19,27 @@ http://kafka.apache.org/07/performance.html
 
 ![producer throughput](http://kafka.apache.org/07/images/onlyBatchSize.jpg)
 
+# What is the consumer throughput?
+
+테스트에 따르면, 브로커에서 100M/sec가량을 소비할 수 있다. 그리고 전체 수치는 컨슈머 스레드 숫자를 증가시키더라도 별다른 변화를 보이지 않는다.
+![consumer throughput](http://kafka.apache.org/07/images/onlyConsumer.jpg)
+
+# Does data size effect our performance?
+
+![data size](http://kafka.apache.org/07/images/dataSize.jpg)
+
+# What is the effect of the number of producer threads on producer throughput?
+
+몇개의 스레드만으로도 최대 아웃풋이 나온다.
+
+![number of producer threads](http://kafka.apache.org/07/images/onlyProducer.jpg)
+
+# What is the effect of number of topics on producer throughput?
+
+토픽의 개수는 전체 데이터 처리에 약간의 영향을 미친다. 아래의 그래프에서는 40개의 프로듀서와 다양한 숫자의 토픽을 사용했을 때의 결과치이다.
+
+![umber of topics](http://kafka.apache.org/07/images/onlyTopic.jpg)
+
 # How to Run a Performance Test
 
 perf 폴더 아래 퍼포먼스와 관련된 코드가 있다. 실행하기 위해서는 :
