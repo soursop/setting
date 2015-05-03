@@ -22,6 +22,7 @@ http://kafka.apache.org/07/performance.html
 # What is the consumer throughput?
 
 테스트에 따르면, 브로커에서 100M/sec가량을 소비할 수 있다. 그리고 전체 수치는 컨슈머 스레드 숫자를 증가시키더라도 별다른 변화를 보이지 않는다.
+
 ![consumer throughput](http://kafka.apache.org/07/images/onlyConsumer.jpg)
 
 # Does data size effect our performance?
