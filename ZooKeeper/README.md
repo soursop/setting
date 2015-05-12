@@ -12,7 +12,7 @@ zookeeper 연결 + WAS 연결 => 같은 트랜젝션 단위로 작성. WAS 연�
 
 * 데이터 락 관리는 제대로 되나?
 
-## The ZooKeeper Data Model
+### The ZooKeeper Data Model
 
 * Data Model
  
@@ -43,7 +43,7 @@ Read할 때나 Write 할 때나 해당 네임스페이스의 모든 데이터를
 노드를 만들때 자동으로 path의 마지막에 카운트를 증가시킬 수록 할 수 있다. 부모 노드 아래에서 unique 하다. (파일 시스템이니 폴더 네임스페이스 개념하고 샆은듯)
 4bytes 단위이니 2147483647 이상 카운트 증가는 불가능 하다.
  
-## Time in Zookeeper
+### Time in Zookeeper
  
 * Zxid
 
@@ -61,7 +61,7 @@ Read할 때나 Write 할 때나 해당 네임스페이스의 모든 데이터를
 
  znode 생성이나 수정 시에 timestamp를 추가하는 경우를 제외하고, real time을 사용하지 않는다. 
 
-## ZooKeeper Stat Structure
+### ZooKeeper Stat Structure
 
 각 필요한 정보를 필드에서 찾아올 수 있다. [참조](http://zookeeper.apache.org/doc/trunk/zookeeperProgrammers.html#sc_zkStatStructure)
 
