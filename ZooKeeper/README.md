@@ -45,6 +45,24 @@ Read할 때나 Write 할 때나 해당 네임스페이스의 모든 데이터를
  
 ## Time in Zookeeper
  
- 
- 
- 
+* Zxid
+
+ 일종의 트랜젝션 ID(ZooKeeper Transaction Id), Zookeeper 내의 모든 변경사항에 대해 순서대로 번호를 매긴 것. zxid1이 zxid2
+
+* Version numbers
+
+ 각 노드의 버전 번호. 3가지의 버전 존재. version(data 변경), cversion(자식 노드의 개수 변경), aversion(ACL 변경)
+
+* Ticks
+
+ 멀티 서버 ZooKeeper를 사용하는 경우, 각 이벤트(upload status, session timeouts, peer간 connection timeout)의 적용 시점을 정의하기 위해 tick을 사용한다. tick을 간접적으로 추론하는 것도 가능한다. tick time * 2배의 시간이 최소한의 session timeout 시간이 된다. 
+
+* Real time
+
+ znode 생성이나 수정 시에 timestamp를 추가하는 경우를 제외하고, real time을 사용하지 않는다. 
+
+## ZooKeeper Stat Structure
+
+각 필요한 정보를 필드에서 찾아올 수 있다. [참조](http://zookeeper.apache.org/doc/trunk/zookeeperProgrammers.html#sc_zkStatStructure)
+
+## ZooKeeper Sessions
