@@ -8,6 +8,10 @@ http://zookeeper.apache.org/doc/trunk/zookeeperProgrammers.html
 
 zookeeper 연결 + WAS 연결 => 같은 트랜젝션 단위로 작성. WAS 연결이 안되면 zookeeper 연결되 안됨 => 세션 종료 => zookeeper 임시 노드 자동 삭제
 
+* 세션 유지는 어떻게 하나? ping을 계속 때리나?
+
+* 데이터 락 관리는 제대로 되나?
+
 ## The ZooKeeper Data Model
 
 * Data Model
