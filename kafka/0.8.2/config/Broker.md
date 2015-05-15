@@ -1,3 +1,5 @@
+### ${kafka}/config/server.properties
+
 Property | Default | Description 
 --- | --- | --- 
 **broker.id**						|					| 브로커의 `id`값. 클러스터에서 유일해야 함
