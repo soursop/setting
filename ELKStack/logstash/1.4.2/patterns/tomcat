@@ -1,0 +1,14 @@
+# (300)
+JAVA_LOC (?:(?<=\()[0-9.]+)
+
+# BannedWords.init, SQLErrorCodesFactory.<init>
+JAVACLASS (?:[a-zA-Z0-9-]+\.)+(<)?[A-Za-z0-9$]+(>)?
+
+# log message
+JAVALOGMESSAGE (.*)
+
+# 2014-01-09 20:03:28.267
+LOG4J_TIMESTAMP 20%{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{HOUR}:?%{MINUTE}(?::%{SECOND})
+
+# [2015-01-26 17:11:57.913] ERROR - com.example.service.ExampleService(30) | something compeletely unexpected happened...
+LOG4JLOG \[%{LOG4J_TIMESTAMP:timestamp}\] %{LOGLEVEL:level} - %{JAVACLASS:class}\(%{JAVA_LOC:line}\) \| %{JAVALOGMESSAGE:logmessage}
