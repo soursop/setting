@@ -70,13 +70,19 @@ Step 6: Setting up a multi-broker cluster
 아래의 프로퍼티 값을 수정하자:
  
 config/server-1.properties:
+    
     broker.id=1
+    
     port=9093
+    
     log.dir=/tmp/kafka-logs-1
  
 config/server-2.properties:
+    
     broker.id=2
+    
     port=9094
+    
     log.dir=/tmp/kafka-logs-2
 
 (본인은 다른 서버에서 작업을 하였으므로 broker.id만 바꿔줬다. 서로 다른 서버에 인스턴스가 띄워져 있다면 포트랑 로그 dir은 중복되도 상관 없을듯 하여 그냥 두었다.)
