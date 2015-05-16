@@ -1,4 +1,5 @@
 ### ${kafka}/config/server.properties
+http://kafka.apache.org/documentation.html#brokerconfigs
 
 Property | Default | Description 
 --- | --- | --- 
