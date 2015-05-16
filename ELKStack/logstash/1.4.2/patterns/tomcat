@@ -11,4 +11,4 @@ JAVALOGMESSAGE (.*)
 LOG4J_TIMESTAMP 20%{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{HOUR}:?%{MINUTE}(?::%{SECOND})
 
 # [2015-01-26 17:11:57.913] ERROR - com.example.service.ExampleService(30) | something compeletely unexpected happened...
-LOG4JLOG \[%{LOG4J_TIMESTAMP:timestamp}\] %{LOGLEVEL:level} - %{JAVACLASS:class}\(%{JAVA_LOC:line}\) \| %{JAVALOGMESSAGE:logmessage}
+LOG4JLOG \[%{LOG4J_TIMESTAMP:timestamp}\] %{LOGLEVEL:level} - (%{JAVACLASS:class}\(%{JAVA_LOC:line}\))?%{JAVALOGMESSAGE:logmessage}
