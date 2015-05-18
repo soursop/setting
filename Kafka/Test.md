@@ -2,7 +2,7 @@ http://kafka.apache.org/07/performance.html
 
 # Performance Results
 
-아래의 테스트는 토픽, 컨슈머, 프로듀서 개수에 따른 Kafka 처리량에 대한 기본적이 정보를 제공한다. 카프카 노드는 각각 독립적이기 떄문에, 단일 프로듀서, 컨슈머, 브로커 만으로도 large cluster 결과치를 추정 가능하다.
+아래의 테스트는 토픽, 컨슈머, 프로듀서 개수에 따른 Kafka 처리량에 대한 기본적이 정보를 제공한다. 카프카 노드는 각각 독립적이기 때문에, 단일 프로듀서, 컨슈머, 브로커 만으로도 large cluster 결과치를 추정 가능하다.
 
 서로 영향을 주지 않기 위해 프로듀서와 컨슈머 테스트를 분리하여 시행한다. 컨슈머의 경우 캐시 되지 않은 lacklog message를 테스트(cold performance)를 시행한다. production 과 consumption를 동시에 테스트 하면 cache가 활성화 되기 때문에 퍼포먼스에 도움을 주는 경향이 있다.
 
