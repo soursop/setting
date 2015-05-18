@@ -65,3 +65,17 @@ perf 폴더 아래 퍼포먼스와 관련된 코드가 있다. 실행하기 위�
      rm -rf /tmp/kafka-logs
      sleep 300
     done
+
+### Test hardware 
+
+* cpu (cat /proc/cpuinfo)
+  Intel(R) Xeon(R) CPU X5650  @ 2.67GHz 64bit
+
+* memoy (free -m)
+  1.9G
+
+* hard dist (df -h)
+  148G
+
+* 리눅스 사용량별 프로세스 (ps -ef --sort -rss | head -n 11) (http://zetawiki.com/wiki/%EB%A6%AC%EB%88%85%EC%8A%A4_sar_%EB%A9%94%EB%AA%A8%EB%A6%AC_%EC%82%AC%EC%9A%A9%EB%A5%A0_%EC%9D%B4%EB%A0%A5_%ED%99%95%EC%9D%B8)
+  
