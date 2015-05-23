@@ -24,3 +24,7 @@
 ### kill all process
 
     kill $(ps aux | grep '프로세스이름' | grep -v grep | awk '{print $2}')
+
+### 서비스 등록
+
+[우분투 서비스 컨트롤 방법](http://snoopybox.co.kr/1720)
