@@ -69,7 +69,11 @@ Read할 때나 Write 할 때나 해당 네임스페이스의 모든 데이터를
 
 각 클라이언트 language로 구현된 handle 을 생성하여 ZooKeeper에 접속을 한다. 
 한번 세션이 생성되면 CONNECTING상태가 되는데, ZooKeeper가 상태를 CONNECTED로 지정하였는지 확인하기 위해 다른 서버에 접속한다.
-만약에 알수 없는 error(session expiration, authentication failure)가 발생하거나, 애플리케이션에서 handle을 종료 시키면 handle은 CLOSED tkdxork ehlsek.
+만약에 알수 없는 error(session expiration, authentication failure)가 발생하거나, 애플리케이션에서 handle을 종료 시키면 handle은 CLOSED 상태로 변경된다.
 
 ![session](http://zookeeper.apache.org/doc/trunk/images/state_dia.jpg)
+
+Q. handle이 뭘까? 상태를 관리하는 인스턴스 같은 건가?
+
+주키퍼 서버 자체도 클러스터링이 가능하다. 따라서 클라이언트가 ZooKeeper server 군으로 (e.g. "127.0.0.1:4545" or "127.0.0.1:3000,127.0.0.1:3001,127.0.0.1:3002")로 요청을 보내면, 그 중 임의의 서버가 접속한다. 만약 접속에 실패하면 클라이언트는 커넥션이 연결 될 때까지 다음 서버에 접속 요청을 보낸다.
 
