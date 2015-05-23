@@ -71,5 +71,5 @@ Read할 때나 Write 할 때나 해당 네임스페이스의 모든 데이터를
 한번 세션이 생성되면 CONNECTING상태가 되는데, ZooKeeper가 상태를 CONNECTED로 지정하였는지 확인하기 위해 다른 서버에 접속한다.
 만약에 알수 없는 error(session expiration, authentication failure)가 발생하거나, 애플리케이션에서 handle을 종료 시키면 handle은 CLOSED tkdxork ehlsek.
 
-[sessin]!(http://zookeeper.apache.org/doc/trunk/images/state_dia.jpg)
+![session](http://zookeeper.apache.org/doc/trunk/images/state_dia.jpg)
 
