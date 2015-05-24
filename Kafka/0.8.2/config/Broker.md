@@ -2,6 +2,7 @@
 http://kafka.apache.org/documentation.html#brokerconfigs
 
 *용어* 
+
 [offset](http://kafka.apache.org/documentation.html#Topics and Logs) : 각 파티션에서 유일한 메시지 id번호
 
 Property | Default | Description 
