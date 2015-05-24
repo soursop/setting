@@ -2,7 +2,7 @@
 ### Performance Check
 
 * `top` : realtime cpu check
-* * u : print processes owned by prompted input user
+ * u : print processes owned by prompted input user
 
 ## Logstash (log parsing) 1.4.2
 * Even though agent(logstash) is killed, it is ok to deliver date to broker as long as you restart agent. (you don't hava to restart all ELK Stack.)
