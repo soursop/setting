@@ -21,6 +21,16 @@
     if ! ssh user@host "test -e '/usr/local/username/$folder'"; then
       # the file doesn't exist
 
+[ssh 설정하기](https://opentutorials.org/module/432/3742)
+
+접속 허용하고 싶은 target 서버에, 내 서버의 pub 키를 복사한다 (ex: ssh egoing.net 하고 싶을때)
+
+    scp $HOME/.ssh/id_rsa.pub egoing@egoing.net:id_rsa.pub
+
+target 서버에서 해당 pub 키를 추가한다
+    
+    cat $HOME/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
 ### kill all process
 
     kill $(ps aux | grep '프로세스이름' | grep -v grep | awk '{print $2}')
