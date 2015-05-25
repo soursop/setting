@@ -1,6 +1,8 @@
 ### Kafka Offset Monitor
 http://quantifind.com/KafkaOffsetMonitor/
 
+    tar zxvf logstash-1.4.2.tar.gz
+
     java -cp KafkaOffsetMonitor-assembly-0.2.1.jar \
      com.quantifind.kafka.offsetapp.OffsetGetterWeb \
      --zk zk-server1,zk-server2 \
