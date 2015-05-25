@@ -23,6 +23,8 @@ sprintf format
       }
     }
 
+[how to filtering by file name input](http://stackoverflow.com/questions/22916200/logstash-how-to-add-file-name-as-a-field)
+
 ## Redis (Broker) 2.8.19
 
 Configuring Redis as a cache
