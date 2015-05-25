@@ -1,8 +1,6 @@
 ### Kafka Offset Monitor
 http://quantifind.com/KafkaOffsetMonitor/
 
-    tar zxvf quantifind-KafkaOffsetMonitor-v0.2.1-4-gbb45fa2.tar
-
     java -cp KafkaOffsetMonitor-assembly-0.2.1.jar \
      com.quantifind.kafka.offsetapp.OffsetGetterWeb \
      --zk zk-server1,zk-server2 \
