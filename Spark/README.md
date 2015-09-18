@@ -6,6 +6,9 @@
 
 # Menual
 
+* Spark를 실행하는 방법은 크게 2가지다.
+* 1. bin에서 쉘 스크립트(spark-shell) 실행 2. 클라이언트 언어를 사용해서 애플리케이션을 만들어 돌리기
+* 개인적으로 1로 테스트 후, 2에 적용한다
 * Spark Shell
  * 옵션과 같이 실행하기
  : MASTER=”spark://n001:7077” ADD_JARS=/home/myuserid/twitter4j/lib/twitter4j-core-3.0.5.jar SPARK_MEM=”24G” ./spark-shell 
