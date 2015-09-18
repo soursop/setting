@@ -8,7 +8,7 @@
 
 * Spark Shell
  * 옵션과 같이 실행하기
-  * MASTER=”spark://n001:7077” ADD_JARS=/home/myuserid/twitter4j/lib/twitter4j-core-3.0.5.jar SPARK_MEM=”24G” ./spark-shell 
+ : MASTER=”spark://n001:7077” ADD_JARS=/home/myuserid/twitter4j/lib/twitter4j-core-3.0.5.jar SPARK_MEM=”24G” ./spark-shell 
 
 # Problems
 
