@@ -4,6 +4,11 @@
  * 빠르다 : 메모리 이용, Lazy Execution, 효율적인 스케줄링
  * 안정적이다 : HDFS
 
+# Menual
+
+* Spark Shell
+ * 옵션과 같이 실행하기
+  * MASTER=”spark://n001:7077” ADD_JARS=/home/myuserid/twitter4j/lib/twitter4j-core-3.0.5.jar SPARK_MEM=”24G” ./spark-shell 
 
 # Problems
 
