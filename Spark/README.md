@@ -13,6 +13,20 @@
  * 옵션과 같이 실행하기
  : MASTER=”spark://n001:7077” ADD_JARS=/home/myuserid/twitter4j/lib/twitter4j-core-3.0.5.jar SPARK_MEM=”24G” ./spark-shell 
 
+# API
+## JdbcRDD
+    public JdbcRDD(SparkContext sc,
+       scala.Function0<java.sql.Connection> getConnection,
+       String sql,
+       long lowerBound,
+       long upperBound,
+       int numPartitions,
+       scala.Function1<java.sql.ResultSet,T> mapRow,
+       scala.reflect.ClassTag<T> evidence$1)
+* spark에서 쿼리를 사용할때는 반드시 두개의 (? ?)값이 쿼리에 포함이 되어 있어야 한다. 그 이유는 그 위에 나오는 numPartitions 개수만큼 파티션을 나누어 쿼리를 분할 시행해야 하는데, 이 때 분할 시행할 기준 값과, 기준값의 범위가 필요하기 때문이다. 
+예를 들어 lowerBound가 1이고,  upperBound가 20이고, numPartitions이 2일 때, 쿼리는 2번 시행 될 것이고 하나는 (1, 10) 범위에서 실행될 것이고, 다른 하나는 (11, 20) 범위로 시행될 것이다.
+ 
+
 # Problems
 
 * [Task not serializable](http://stackoverflow.com/questions/22592811/task-not-serializable-java-io-notserializableexception-when-calling-function-ou)
