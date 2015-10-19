@@ -12,7 +12,12 @@
 * Spark Shell
  * 옵션과 같이 실행하기
  : MASTER=”spark://n001:7077” ADD_JARS=/home/myuserid/twitter4j/lib/twitter4j-core-3.0.5.jar SPARK_MEM=”24G” ./spark-shell 
-
+* Configure
+ * executer 메모리 옵션
+supplying configuration setting at runtime
+    $ ./bin/spark-shell --driver-memory 5g
+setting it in the properties file (default is spark-defaults.conf)
+    spark.driver.memory              5g
 # API
 ## JdbcRDD
     public JdbcRDD(SparkContext sc,
