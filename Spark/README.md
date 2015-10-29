@@ -43,7 +43,5 @@ setting it in the properties file (default is spark-defaults.conf)
  spark의 경우 각 job들이 분산 노드들에게 쪼개서 할당되는데, 이 경우 같이 공유 해야 하는 공유 자원들이 있다. 
  각 노드간에 공유해야 하는 자원들은 자동으로 serialize 통신을 하게 되는데, 
  이 경우 serialize 처리가 되어 있지 않는 객체들은 에러와 함께 죽어버리게 된다.
- e.g.) DriverManager.getConnection을 참조값으로 넘겨주는 경우
- e.g.) 공유 자원을 넘겨 줄때 각 노드간의 환경이 다른 경우(노드간의 스칼라 버전이 다른경우, serilize 형식이 다르므로 에러와 함께 죽음)
-* import 문제
- * foreach 구문안에서 자동으로 컨텍스트가 갱신되기 때문에 명시적으로 import를 다시 해야한다.
+ * e.g.) DriverManager.getConnection을 참조값으로 넘겨주는 경우
+ * e.g.) 공유 자원을 넘겨 줄때 각 노드간의 환경이 다른 경우(노드간의 스칼라 버전이 다른경우, serilize 형식이 다르므로 에러와 함께 죽음)
