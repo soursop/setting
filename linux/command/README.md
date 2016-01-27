@@ -15,7 +15,10 @@
     tar zcvf [파일명.tar.gz] [압축 폴더]
 
 ### SSH
+[ssh 만들기](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
+    ssh-keygen
+    
 [ssh로 파일이 있는지 체크하기](http://serverfault.com/questions/103174/check-to-see-if-a-directory-exists-remotely-shell-script)
 
     if ! ssh user@host "test -e '/usr/local/username/$folder'"; then
