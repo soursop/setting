@@ -18,6 +18,7 @@
 [ssh 만들기](https://git-scm.com/book/ko/v1/Git-%EC%84%9C%EB%B2%84-SSH-%EA%B3%B5%EA%B0%9C%ED%82%A4-%EB%A7%8C%EB%93%A4%EA%B8%B0)
 
     ssh-keygen
+    ssh-keygen -t rsa (rsa 방식의 공개키 쌍을 만들겠다는 옵션)
     
 [ssh로 파일이 있는지 체크하기](http://serverfault.com/questions/103174/check-to-see-if-a-directory-exists-remotely-shell-script)
 
@@ -28,11 +29,15 @@
 
 접속 허용하고 싶은 target 서버에, 내 서버의 pub 키를 복사한다 (ex: ssh egoing.net 하고 싶을때)
 
-    scp $HOME/.ssh/id_rsa.pub egoing@egoing.net:id_rsa.pub
+    user@client~$ scp $HOME/.ssh/id_rsa.pub egoing@egoing.net:id_rsa.pub
 
 target 서버에서 해당 pub 키를 추가한다
-    
-    cat $HOME/id_rsa.pub >> $HOME/.ssh/authorized_keys
+
+    user@client~$ cat .ssh/id_rsa.pub | ssh ruser@server 'cat >> .ssh/authorized_keys'
+
+target 서버에서 authorized_keys 권한을 변환한다 (이 .ssh 디렉토리는 권한이 반드시 700 (rwx --- ---)여야 합니다. 권한이 안전하게 설정되어 있지 않으면 OpenSSH는 에러를 뱉어내고 제대로 동작하지 않습니다.)
+
+    user@client~$ ssh ruser@server 'chmod 600 .ssh/authorized_keys'
 
 ### kill all process
 
