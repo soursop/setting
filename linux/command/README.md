@@ -39,6 +39,10 @@ target 서버에서 authorized_keys 권한을 변환한다 (이 .ssh 디렉토�
 
     user@client~$ ssh ruser@server 'chmod 600 .ssh/authorized_keys'
 
+[Mac에서 ssh접속이 안될때](http://stackoverflow.com/questions/6313929/how-do-i-open-port-22-in-os-x-10-6-7)
+
+    시스템 환경설정 > 공유 > 원격 로그인 체크 허용
+
 ### kill all process
 
     kill $(ps aux | grep '프로세스이름' | grep -v grep | awk '{print $2}')
